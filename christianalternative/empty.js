@@ -1,0 +1,6 @@
+{
+    quote: "",
+    source: "",
+    cover: "",
+    spotify: ""
+}
