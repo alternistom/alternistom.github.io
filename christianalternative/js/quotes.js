@@ -165,7 +165,71 @@ var quotes = [
 		source: "Brave New World Records, 2006",
 		cover: "img/deasvail_collapse.jpg",
 		spotify: "3VhE92XpQ2uW8aCaoHS79Y"
+	},
+
+	{
+		quote: "The Send - Cosmos",
+		source: "Tooth & Nail Records, 2007",
+		cover: "img/thesend_cosmos.jpg",
+		spotify: "3bObf9JtLKKdhtdXDPjHKY"
+	},
+
+	{
+		quote: "Anberlin - Cities",
+		source: "Tooth & Nail Records, 2007",
+		cover: "img/anberlin_cities.jpg",
+		spotify: "28nL2dA7iE9IWEcUzzPido"
+	},
+
+	{
+		quote: "Anberlin - Dark Is The Way, Light Is A Place",
+		source: "Universal Music, 2010",
+		cover: "img/anberlin_darkisthewaylightistheplace.jpg",
+		spotify: "0aJvU0peEjLVYTOhaPVLXv"
+	},
+
+	{
+		quote: "Anberlin - New Surrender",
+		source: "Universal Republic, 2008",
+		cover: "img/anberlin_newsurrender.jpg",
+		spotify: "2fw81nvsbe3yX5WYGqbF9e"
+	},
+
+	{
+		quote: "Anberlin - Never Take Friendship Personal",
+		source: "Tooth & Nail Records, 2005",
+		cover: "img/anberlin_nevertakefriendshipspersonal.jpg",
+		spotify: "7F1dp39OljDwaJes2ruO0w"
+	},
+
+	{
+		quote: "Anberlin - Lowborn",
+		source: "Tooth & Nail Records, 2014",
+		cover: "img/anberlin_lowborn.jpg",
+		spotify: "0J2ytBHerNl1uzVP5jozX2"
+	},
+
+	{
+		quote: "Anberlin - Blueprints For The Black Market",
+		source: "Tooth & Nail Records, 2003",
+		cover: "img/anberlin_blueprintsfortheblackmarket.jpg",
+		spotify: "36oe7wKlSzYswiAXb4Kt35"
+	},
+
+	{
+		quote: "Anberlin - Lost Songs",
+		source: "Tooth & Nail Records, 2007",
+		cover: "img/anberlin_lostsongs.jpg",
+		spotify: "7wXYi05mImVHUQwOJbVzCH"
+	},
+
+	{
+		quote: "Anberlin - Vital",
+		source: "Universal Republic, 2012",
+		cover: "img/anberlin_vital.jpg",
+		spotify: "0nLFBWp0GsRZo8vwWD4ocH"
 	}
+
 
 
 
