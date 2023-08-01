@@ -28,7 +28,7 @@ Ha lentebb tekerünk elérkezünk az __Assets__ részhez, itt találhatjuk a let
 
 A letöltött file-t csupán ki kell csomagolnunk egy mappába, eredményül egy __system__ és egy __applications__ mappa lesz, ezt a két mappát csak fel kell másolnunk az __olvasó főmemóriájába__ (tehát nem az SD kártyásra) méghozzá simán csak a főkönyvtárba (nem kell belelépnünk az olvasó memóriájában semmiféle mappában).
 
-És... ezzek kész is vagyunk :)
+És... ezzel kész is vagyunk :)
 
 Ha biztonságosan leválasztjuk a készüléket, akkor az __alkalmazások__ menüpont legalján meg is találjuk a __@koreader__ nevü ikonnal, amire ha rányomunk el is indul.
 
