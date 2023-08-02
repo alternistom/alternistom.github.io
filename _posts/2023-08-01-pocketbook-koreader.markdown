@@ -82,14 +82,22 @@ Ezekkel a beállításokkal garantáljuk hogy miután az oldal betöltődött, t
 
 # Szótárak letöltése és használata
 
+Még a KOReader indítása előtt érdemes a készüléken kézileg bekapcsolni a WiFit.
+
 Felső menüt lehúzzuk -> Nagyító ikon -> Beállítások -> Szótár beállítások -> Szótárak letöltése
 
 Innen kiválasztjuk az egyik nyelvet amire vagy amiről szeretnénk fordítani (alul tudunk lapozni), pl.: német.
 Itt is lapozva tudjuk megtekinteni az összes elérhető szótárakat az adott nyelvhez. Ha megvan a kívánt szótár nyomjunk rá a nevére.
-Ha nincs a WiFi bekapcsolva az olvasón akkor itt rákérdez, hogy kapcsolja-e be, majd megkérdezi hogy le akarod-e tölteni, nyomjunk a Letöltésre.
+Ha nincs a WiFi bekapcsolva az olvasón akkor itt rákérdez, hogy kapcsolja-e be (de ez a funkció mintha nem mindig működne, jobban járunk ha kézzel bekapcsoljuk mi), majd megkérdezi hogy le akarjuk-e tölteni, nyomjunk a Letöltésre.
 
 Ezek után nincs más teendőnk mint a könyvben egy szóra hosszan rányomni és fel is ugrik a szótár. (A szótár WiFi nélkül is működik, csak letöltéshez kellett.)
 
 Ha több szótárunk van letöltve de nem kell éppen az egyik akkor azt a:
 Felső menüt lehúzzuk -> Nagyító ikon -> Beállítások -> Szótár beállítások -> Szótárak kezelése menüre nyomva tudjuk kivenni az X-et a nem kívánt használata elől.
-Egyébként pedig a felugró ablak bal felső sarkában tudunk szótárak váltani egy szó megnyitásakkor.
+Egyébként pedig a felugró ablak bal felső sarkában tudunk szótárak váltani egy szó megnyitásakor.
+
+# KOReader frissítése új verzióra
+
+Felső menüt lehúzzuk -> három vízszintes vonal ikon (hamburger menü másnéven) -> Frissítés -> Frissítések keresése
+
+Ha elérhető új verzió, akkor rákérdez hogy letöltjük-e, majd letöltés után hogy telepítjük-e. Telepítés során mindenféle információt kiír, ennek végeztével a KOReader újraindul és az olvasás folytatható onnan ahol abbahagytuk.
