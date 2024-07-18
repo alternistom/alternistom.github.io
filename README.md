@@ -1,1 +1,2 @@
-# alternistom.github.io
+# intimtrener
+the website for intimtrener.hu
