@@ -1,5 +1,5 @@
 @import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic");
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900|Source+Sans+Pro:300,600,300italic,600italic");
 
 /*
 	Solid State by HTML5 UP
@@ -3076,7 +3076,7 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out;
-		background-color: rgba(53, 56, 73, 0.95);
+		background-color: rgba(140, 58, 88, 0.80);
 		height: 3.5em;
 		left: 0;
 		line-height: 3.5em;
@@ -3281,7 +3281,7 @@ input, select, textarea {
 			-ms-transition: opacity 0.35s ease, -ms-transform 0.35s ease;
 			transition: opacity 0.35s ease, transform 0.35s ease;
 			-webkit-overflow-scrolling: touch;
-			background: #4c5c96;
+			background: #8C3A58;
 			border-radius: 5px;
 			display: block;
 			max-width: 100%;
@@ -3337,7 +3337,7 @@ input, select, textarea {
 				}
 
 					#menu .links li a:hover {
-						background: #45558d;
+						background: #3A8C40;
 					}
 
 		@media screen and (max-width: 736px) {
@@ -3397,6 +3397,7 @@ input, select, textarea {
 			transform: translateY(0);
 			opacity: 1;
 			margin: 0 0 1.3em 0;
+			max-width: 150px;
 		}
 
 			#banner .logo .icon {
@@ -3409,6 +3410,10 @@ input, select, textarea {
 				line-height: 2.25em;
 				text-align: center;
 				width: 2.25em;
+			}
+
+			#banner .logo .imglogo {
+				max-width: 90%;
 			}
 
 		#banner h2 {
@@ -3455,7 +3460,7 @@ input, select, textarea {
 			opacity: 1;
 			font-family: Raleway, Helvetica, sans-serif;
 			font-size: 1em;
-			font-weight: 200;
+			font-weight: 400;
 			text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 			letter-spacing: 0.1em;
 			line-height: 2;
@@ -3503,6 +3508,10 @@ input, select, textarea {
 
 					#banner .logo .icon {
 						font-size: 1.5em;
+					}
+
+					#banner .logo .imglogo {
+						max-width: 50%;
 					}
 
 				#banner h2 {
@@ -3992,7 +4001,7 @@ input, select, textarea {
 
 			.wrapper.spotlight .image {
 				margin: 0 0 1em 0 !important;
-				max-width: 85%;
+				max-width: 25%;
 				width: 12em;
 			}
 
