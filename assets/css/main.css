@@ -3812,7 +3812,7 @@ input, select, textarea {
 				}
 
 			.wrapper.spotlight .content {
-				width: 150%;
+				width: 100%;
 				-ms-flex: 2;
 			}
 
