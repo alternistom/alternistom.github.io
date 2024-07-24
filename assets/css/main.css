@@ -100,7 +100,7 @@ input, select, textarea {
 
 	body {
 		background-color: #ac3450;
-		background-image: linear-gradient(to top, rgba(172, 52, 80, 0.9), rgba(201, 126, 133, 0.9)), url("../../images/bg.jpg");
+		background-image: linear-gradient(to top, rgba(172, 52, 80, 0.9), rgba(185, 77, 100, 0.9)), url("../../images/bg.jpg");
 		background-size: auto,
  cover;
 		background-attachment: fixed,
@@ -3472,7 +3472,7 @@ input, select, textarea {
 			#banner {
 				padding: 7em 0 8.25em 0 ;
 				background-color: #ac3450;
-				background-image: linear-gradient(to top, rgba(172, 52, 80, 0.9), rgba(201, 126, 133, 0.9)), url("../../images/bg.jpg");
+				background-image: linear-gradient(to top, rgba(172, 52, 80, 0.9), rgba(185, 77, 100, 0.9)), url("../../images/bg.jpg");
 				background-size: auto,
  cover;
 				background-position: center,
@@ -3588,7 +3588,7 @@ input, select, textarea {
 		#wrapper > header {
 			padding: 9em 0 6.25em 0 ;
 			background-color: #ac3450;
-			background-image: linear-gradient(to top, rgba(172, 52, 80, 0.9), rgba(201, 126, 133, 0.9)), url("../../images/bg.jpg");
+			background-image: linear-gradient(to top, rgba(172, 52, 80, 0.9), rgba(185, 77, 100, 0.9)), url("../../images/bg.jpg");
 			background-size: auto,
  cover;
 			background-position: center,
@@ -3635,21 +3635,21 @@ input, select, textarea {
 	}
 
 	.wrapper {
-		background-color: #611D2D;
+		background-color: #923a4e;
 		margin: 6.5em 0;
 		position: relative;
 	}
 
 		.wrapper:before, .wrapper:after {
-			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23611D2D%3B' /%3E%3C/svg%3E");
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23923a4e%3B' /%3E%3C/svg%3E");
 		}
 
 		.wrapper:before {
-			box-shadow: inset 0 -1px 0 0 #611D2D, 0 1px 0 0 #611D2D;
+			box-shadow: inset 0 -1px 0 0 #923a4e, 0 1px 0 0 #923a4e;
 		}
 
 		.wrapper:after {
-			box-shadow: inset 0 -1px 0 0 #611D2D, 0 1px 0 0 #611D2D;
+			box-shadow: inset 0 -1px 0 0 #923a4e, 0 1px 0 0 #923a4e;
 		}
 
 		.wrapper:before, .wrapper:after {
@@ -3830,7 +3830,7 @@ input, select, textarea {
 				-webkit-flex-direction: row-reverse;
 				-ms-flex-direction: row-reverse;
 				flex-direction: row-reverse;
-				text-align: justify;
+				text-align: left;
 			}
 
 			.wrapper.spotlight:nth-child(2n - 1) .image {
@@ -4081,7 +4081,7 @@ input, select, textarea {
 
 		#footer {
 			background-color: #ac3450;
-			background-image: linear-gradient(to top, rgba(172, 52, 80, 0.9), rgba(201, 126, 133, 0.9)), url("../../images/bg.jpg");
+			background-image: linear-gradient(to top, rgba(172, 52, 80, 0.9), rgba(185, 77, 100, 0.9)), url("../../images/bg.jpg");
 			background-size: auto,
  cover;
 			background-position: center,
