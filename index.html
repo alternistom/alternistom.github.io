@@ -24,7 +24,7 @@
 		
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link id="theme-stylesheet" rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 		<script type="text/javascript">
@@ -48,6 +48,50 @@
 						});
 				});
 			}
+		</script>
+		<script type="text/javascript">
+			function setCookie(name, value, days) {
+				const d = new Date();
+				d.setTime(d.getTime() + (days*24*60*60*1000));
+				const expires = "expires="+ d.toUTCString();
+				document.cookie = name + "=" + value + ";" + expires + ";path=/";
+			}
+	
+			function getCookie(name) {
+				const cname = name + "=";
+				const decodedCookie = decodeURIComponent(document.cookie);
+				const ca = decodedCookie.split(';');
+				for(let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(cname) == 0) {
+						return c.substring(cname.length, c.length);
+					}
+				}
+				return "";
+			}
+	
+			function switchTheme() {
+				const currentTheme = getCookie('theme');
+				if (currentTheme === 'alternative') {
+					setCookie('theme', 'default', 365);
+					document.getElementById('theme-stylesheet').href = 'assets/css/main.css';
+				} else {
+					setCookie('theme', 'alternative', 365);
+					document.getElementById('theme-stylesheet').href = 'assets/css/alternative.css';
+				}
+			}
+	
+			window.onload = function() {
+				const savedTheme = getCookie('theme');
+				if (savedTheme === 'alternative') {
+					document.getElementById('theme-stylesheet').href = 'assets/css/alternative.css';
+				}
+	
+				document.getElementById('theme-switch-logo').addEventListener('click', switchTheme);
+			};
 		</script>
 	</head>
 	<body class="is-preload">
@@ -81,7 +125,9 @@
 				<!-- Banner -->
 					<section id="banner">
 						<div class="inner">
-							<div class="logo"><img class="imglogo" src="images/PataiSzilvia_logo_bézs.png" alt="Patai Szilvia intim tréner logója"></div>
+							<div class="logo">
+								<img id="theme-switch-logo" class="imglogo" src="images/PataiSzilvia_logo_bézs.png" alt="Patai Szilvia intim tréner logója">
+							</div>
 							<h2>Intim torna nőknek</h2>
 							<p>Patai Szilvia vagyok, női intim torna tréner. Tarts velem egyéni vagy kiscsoportos óráimon, ahol elsajátíthatod a gátizomtornát!</p>
 						</div>
