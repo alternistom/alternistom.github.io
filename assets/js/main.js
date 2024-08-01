@@ -1,14 +1,3 @@
-// Add an event listener to run the function when the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", function() {
-    // Select all elements with the class "fade-in"
-    const fadeInElements = document.querySelectorAll('.fade-in');
-
-    // Add the "visible" class to each element to start the fade-in effect
-    fadeInElements.forEach(element => {
-        element.classList.add('visible');
-    });
-});
-
 (function($) {
 
 	var	$window = $(window),
