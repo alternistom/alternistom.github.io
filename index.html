@@ -49,50 +49,6 @@
 				});
 			}
 		</script>
-		<script type="text/javascript">
-			function setCookie(name, value, days) {
-				const d = new Date();
-				d.setTime(d.getTime() + (days*24*60*60*1000));
-				const expires = "expires="+ d.toUTCString();
-				document.cookie = name + "=" + value + ";" + expires + ";path=/";
-			}
-	
-			function getCookie(name) {
-				const cname = name + "=";
-				const decodedCookie = decodeURIComponent(document.cookie);
-				const ca = decodedCookie.split(';');
-				for(let i = 0; i < ca.length; i++) {
-					let c = ca[i];
-					while (c.charAt(0) == ' ') {
-						c = c.substring(1);
-					}
-					if (c.indexOf(cname) == 0) {
-						return c.substring(cname.length, c.length);
-					}
-				}
-				return "";
-			}
-	
-			function switchTheme() {
-				const currentTheme = getCookie('theme');
-				if (currentTheme === 'alternative') {
-					setCookie('theme', 'default', 365);
-					document.getElementById('theme-stylesheet').href = 'assets/css/main.css';
-				} else {
-					setCookie('theme', 'alternative', 365);
-					document.getElementById('theme-stylesheet').href = 'assets/css/alternative.css';
-				}
-			}
-	
-			window.onload = function() {
-				const savedTheme = getCookie('theme');
-				if (savedTheme === 'alternative') {
-					document.getElementById('theme-stylesheet').href = 'assets/css/alternative.css';
-				}
-	
-				document.getElementById('theme-switch-logo').addEventListener('click', switchTheme);
-			};
-		</script>
 	</head>
 	<body class="is-preload">
 
@@ -126,7 +82,7 @@
 					<section id="banner">
 						<div class="inner">
 							<div class="logo">
-								<img id="theme-switch-logo" class="imglogo" src="images/PataiSzilvia_logo_bézs.png" alt="Patai Szilvia intim tréner logója">
+								<img class="imglogo" src="images/PataiSzilvia_logo_bézs.png" alt="Patai Szilvia intim tréner logója">
 							</div>
 							<h2>Intim torna nőknek</h2>
 							<p>Patai Szilvia vagyok, női intim torna tréner. Tarts velem egyéni vagy kiscsoportos óráimon, ahol elsajátíthatod a gátizomtornát!</p>
@@ -137,7 +93,7 @@
 					<section id="wrapper">
 
 						<!-- One -->
-							<section id="one" class="wrapper spotlight style2 fade-in">
+							<section id="one" class="wrapper spotlight style2">
 								<div class="inner">
 									<a href="#" class="image"><img src="images/circ_1.png" alt="" /></a>
 									<div class="content">
@@ -156,7 +112,7 @@
 							</section>
 
 						<!-- Two -->
-						<section id="two" class="wrapper alt spotlight style3 fade-in">
+						<section id="two" class="wrapper alt spotlight style3">
 							<div class="inner">
 								<a href="#" class="image"><img src="images/circ_2.png" alt="" /></a>
 								<div class="content">
@@ -175,7 +131,7 @@
 						</section>
 
 						<!-- One -->
-						<section id="one" class="wrapper spotlight style2 fade-in">
+						<section id="one" class="wrapper spotlight style2">
 							<div class="inner">
 								<a href="#" class="image"><img src="images/circ_3.png" alt="" /></a>
 								<div class="content">
@@ -193,7 +149,7 @@
 						</section>
 
 						<!-- Two -->
-							<section id="two" class="wrapper alt spotlight style3 fade-in">
+							<section id="two" class="wrapper alt spotlight style5">
 								<div class="inner">
 									<a href="#" class="image"><img src="images/happy.jpg" alt="" /></a>
 									<div class="content">
@@ -208,7 +164,7 @@
 							</section>
 
 						<!-- Three -->
-							<section id="three" class="wrapper spotlight style4 fade-in">
+							<section id="three" class="wrapper spotlight style7">
 								<div class="inner">
 									<a href="#" class="image"><img src="images/szilvia.jpg" alt="" /></a>
 									<div class="content">
@@ -226,7 +182,7 @@
 
 				<!-- Footer -->
 					<section id="footer">
-						<div class="inner fade-in">
+						<div class="inner">
 							<h2 class="major">ELÉRHETŐSÉGEK</h2>
 							<p>
 								Egyéni és kiscsoportos intimtorna tanfolyamokat tartok Cegléden, ahol barátságos közegben minden résztvevő személyreszabott figyelmet kap.
