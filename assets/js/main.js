@@ -1,8 +1,13 @@
-/*
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+// Add an event listener to run the function when the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Select all elements with the class "fade-in"
+    const fadeInElements = document.querySelectorAll('.fade-in');
+
+    // Add the "visible" class to each element to start the fade-in effect
+    fadeInElements.forEach(element => {
+        element.classList.add('visible');
+    });
+});
 
 (function($) {
 
@@ -141,5 +146,26 @@
 						$menu._hide();
 
 			});
+
+
+		// Apply fade-in effect to sections.
+		$('.fade-in').scrollex({
+			mode: 'middle', // Trigger when the top of the element is in the viewport
+    		offset: '-200px', // Start the fade-in before the top reaches the viewport
+			delay: 0,
+			initialize: function() {
+				// Ensure the element is initialized correctly.
+				$(this).addClass('fade-in'); // Ensure the fade-in class is applied
+			},
+			enter: function() {
+				// Add the visible class when the element enters the viewport.
+				$(this).addClass('visible');
+			},
+			leave: function() {
+				// Remove the visible class when the element leaves the viewport
+				// to ensure the effect re-triggers when scrolling back up.
+				$(this).removeClass('visible');
+			}
+		});
 
 })(jQuery);
