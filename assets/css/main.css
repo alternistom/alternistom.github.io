@@ -2457,6 +2457,14 @@ input, select, textarea {
 				width: 100%;
 			}
 
+
+		.col-6 .image.fit {
+			display: flex;
+			align-items: center; /* Vertically centers the image */
+			justify-content: center; /* Centers the image horizontally within the container */
+			height: 100%; /* Ensures the flex container takes the full height of the column */
+		}
+
 /* List */
 
 	ol {
@@ -3770,6 +3778,49 @@ input, select, textarea {
 				box-shadow: inset 0 -1px 0 0 #555867, 0 1px 0 0 #555867;
 			}
 
+		/* BALRÓL JOBBRA BÉZS */
+
+		.wrapper.style7 {
+			background-color: #F0DEC6;
+		}
+
+		.wrapper.style7 p,
+		.wrapper.style7 li,
+		.wrapper.style7 b {
+			color: #574329;
+		}
+
+		.wrapper.style7 h1,
+		.wrapper.style7 h2,
+		.wrapper.style7 h3,
+		.wrapper.style7 h4,
+		.wrapper.style7 h5,
+		.wrapper.style7 a,
+		.wrapper.style7 hr{
+			color: #AD3451;
+		}
+
+		.wrapper.style7 a.special:not(.button):before {
+			border: solid 2px rgba(173, 52, 81, 0.125);
+		}
+
+
+		.wrapper.style7 h2.major {
+			border-bottom: solid 2px rgba(173, 52, 81, 0.125);
+		}
+
+		.wrapper.style7:before, .wrapper.style7:after {
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23F0DEC6%3B' /%3E%3C/svg%3E");
+		}
+
+		.wrapper.style7:before {
+			box-shadow: inset 0 -1px 0 0 #F0DEC6, 0 1px 0 0 #F0DEC6;
+		}
+
+		.wrapper.style7:after {
+			box-shadow: inset 0 -1px 0 0 #F0DEC6, 0 1px 0 0 #F0DEC6;
+		}
+
 		.wrapper.spotlight {
 			background-color: #4c5c96;
 		}
@@ -3831,182 +3882,200 @@ input, select, textarea {
 				margin: 0 0 2em 3em;
 			}
 
+			/* BALRÓL JOBBRA BORDÓ */
+
 			.wrapper.spotlight.style2 {
 				background-color: #8C3A58;
 			}
 
-				.wrapper.spotlight.style2:before, .wrapper.spotlight.style2:after {
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%238C3A58%3B' /%3E%3C/svg%3E");
-				}
-
-				.wrapper.spotlight.style2:before {
-					box-shadow: inset 0 -1px 0 0 #8C3A58, 0 1px 0 0 #8C3A58;
-				}
-
-				.wrapper.spotlight.style2:after {
-					box-shadow: inset 0 -1px 0 0 #8C3A58, 0 1px 0 0 #8C3A58;
-				}
-
-			.wrapper.spotlight.style3 {
-				background-color: #A63352;
+			.wrapper.spotlight.style2:before, .wrapper.spotlight.style2:after {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%238C3A58%3B' /%3E%3C/svg%3E");
 			}
 
-				.wrapper.spotlight.style3 {
-					background-color: #F0DEC6;
-				}
+			.wrapper.spotlight.style2:before {
+				box-shadow: inset 0 -1px 0 0 #8C3A58, 0 1px 0 0 #8C3A58;
+			}
 
-				.wrapper.spotlight.style3 p,
-				.wrapper.spotlight.style3 li,
-				.wrapper.spotlight.style7 b {
-					color: #705635;
-				}
+			.wrapper.spotlight.style2:after {
+				box-shadow: inset 0 -1px 0 0 #8C3A58, 0 1px 0 0 #8C3A58;
+			}
 
-				.wrapper.spotlight.style3 h1,
-				.wrapper.spotlight.style3 h2,
-				.wrapper.spotlight.style3 h3,
-				.wrapper.spotlight.style3 h4,
-				.wrapper.spotlight.style3 h5,
-				.wrapper.spotlight.style3 a,
-				.wrapper.spotlight.style3 hr{
-					color: #AD3451;
-				}
+			/* JOBBRÓL BALRA BÉZS */
 
-				.wrapper.spotlight.style3 a.special:not(.button):before {
-					border: solid 2px rgba(173, 52, 81, 0.125);
-				}
+			.wrapper.spotlight.style3 {
+				background-color: #F0DEC6;
+			}
+
+			.wrapper.spotlight.style3 p,
+			.wrapper.spotlight.style3 li,
+			.wrapper.spotlight.style7 b {
+				color: #574329;
+			}
+
+			.wrapper.spotlight.style3 h1,
+			.wrapper.spotlight.style3 h2,
+			.wrapper.spotlight.style3 h3,
+			.wrapper.spotlight.style3 h4,
+			.wrapper.spotlight.style3 h5,
+			.wrapper.spotlight.style3 a,
+			.wrapper.spotlight.style3 hr{
+				color: #AD3451;
+			}
+
+			.wrapper.spotlight.style3 a.special:not(.button):before {
+				border: solid 2px rgba(173, 52, 81, 0.125);
+			}
 
 
-				.wrapper.spotlight.style3 h2.major {
-					border-bottom: solid 2px rgba(173, 52, 81, 0.125);
-				}
+			.wrapper.spotlight.style3 h2.major {
+				border-bottom: solid 2px rgba(173, 52, 81, 0.125);
+			}
 
-				.wrapper.spotlight.style3:before, .wrapper.spotlight.style3:after {
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23F0DEC6%3B' /%3E%3C/svg%3E");
-				}
+			.wrapper.spotlight.style3:before, .wrapper.spotlight.style3:after {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23F0DEC6%3B' /%3E%3C/svg%3E");
+			}
 
-				.wrapper.spotlight.style3:before {
-					box-shadow: inset 0 -1px 0 0 #F0DEC6, 0 1px 0 0 #F0DEC6;
-				}
+			.wrapper.spotlight.style3:before {
+				box-shadow: inset 0 -1px 0 0 #F0DEC6, 0 1px 0 0 #F0DEC6;
+			}
 
-				.wrapper.spotlight.style3:after {
-					box-shadow: inset 0 -1px 0 0 #F0DEC6, 0 1px 0 0 #F0DEC6;
-				}
+			.wrapper.spotlight.style3:after {
+				box-shadow: inset 0 -1px 0 0 #F0DEC6, 0 1px 0 0 #F0DEC6;
+			}
 
 			.wrapper.spotlight.style4 {
 				background-color: #8A2940;
 			}
 
-				.wrapper.spotlight.style4:before, .wrapper.spotlight.style4:after {
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%238A2940%3B' /%3E%3C/svg%3E");
-				}
+			.wrapper.spotlight.style4:before, .wrapper.spotlight.style4:after {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%238A2940%3B' /%3E%3C/svg%3E");
+			}
 
-				.wrapper.spotlight.style4:before {
-					box-shadow: inset 0 -1px 0 0 #8A2940, 0 1px 0 0 #8A2940;
-				}
+			.wrapper.spotlight.style4:before {
+				box-shadow: inset 0 -1px 0 0 #8A2940, 0 1px 0 0 #8A2940;
+			}
 
-				.wrapper.spotlight.style4:after {
-					box-shadow: inset 0 -1px 0 0 #8A2940, 0 1px 0 0 #8A2940;
-				}
+			.wrapper.spotlight.style4:after {
+				box-shadow: inset 0 -1px 0 0 #8A2940, 0 1px 0 0 #8A2940;
+			}
+
+			/* JOBBRÓL BALRA BORDÓ 2 */
 
 			.wrapper.spotlight.style5 {
 				background-color: #A63352;
 			}
 
-				.wrapper.spotlight.style5:before, .wrapper.spotlight.style5:after {
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23A63352%3B' /%3E%3C/svg%3E");
-				}
+			.wrapper.spotlight.style5:before, .wrapper.spotlight.style5:after {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23A63352%3B' /%3E%3C/svg%3E");
+			}
 
-				.wrapper.spotlight.style5:before {
-					box-shadow: inset 0 -1px 0 0 #A63352, 0 1px 0 0 #A63352;
-				}
+			.wrapper.spotlight.style5:before {
+				box-shadow: inset 0 -1px 0 0 #A63352, 0 1px 0 0 #A63352;
+			}
 
-				.wrapper.spotlight.style5:after {
-					box-shadow: inset 0 -1px 0 0 #A63352, 0 1px 0 0 #A63352;
-				}
+			.wrapper.spotlight.style5:after {
+				box-shadow: inset 0 -1px 0 0 #A63352, 0 1px 0 0 #A63352;
+			}
 
-				.wrapper.spotlight.style6 {
-					background-color: #F0DEC6;
-				}
+			.wrapper.spotlight.style6 {
+				background-color: #F0DEC6;
+			}
 
-				.wrapper.spotlight.style6 p,
-				.wrapper.spotlight.style6 li {
-					color: #705635;
-				}
+			.wrapper.spotlight.style6 p,
+			.wrapper.spotlight.style6 li {
+				color: #705635;
+			}
 
-				.wrapper.spotlight.style6 h1,
-				.wrapper.spotlight.style6 h2,
-				.wrapper.spotlight.style6 h3,
-				.wrapper.spotlight.style6 h4,
-				.wrapper.spotlight.style6 h5,
-				.wrapper.spotlight.style6 a,
-				.wrapper.spotlight.style6 hr {
-					color: #AD3451;
-				}
+			.wrapper.spotlight.style6 h1,
+			.wrapper.spotlight.style6 h2,
+			.wrapper.spotlight.style6 h3,
+			.wrapper.spotlight.style6 h4,
+			.wrapper.spotlight.style6 h5,
+			.wrapper.spotlight.style6 a,
+			.wrapper.spotlight.style6 hr {
+				color: #AD3451;
+			}
 
-				.wrapper.spotlight.style6 h2.major {
-					border-bottom: solid 2px rgba(173, 52, 81, 0.125);
-				}
+			.wrapper.spotlight.style6 h2.major {
+				border-bottom: solid 2px rgba(173, 52, 81, 0.125);
+			}
 
-				.wrapper.spotlight.style6 a.special:not(.button):before {
-					border: solid 2px rgba(173, 52, 81, 0.125);
-				}
+			.wrapper.spotlight.style6 a.special:not(.button):before {
+				border: solid 2px rgba(173, 52, 81, 0.125);
+			}
 
-				.wrapper.spotlight.style6:before, .wrapper.spotlight.style6:after {
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23F0DEC6%3B' /%3E%3C/svg%3E");
-				}
+			.wrapper.spotlight.style6:before, .wrapper.spotlight.style6:after {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23F0DEC6%3B' /%3E%3C/svg%3E");
+			}
 
-				.wrapper.spotlight.style6:before {
-					box-shadow: inset 0 -1px 0 0 #F0DEC6, 0 1px 0 0 #F0DEC6;
-				}
+			.wrapper.spotlight.style6:before {
+				box-shadow: inset 0 -1px 0 0 #F0DEC6, 0 1px 0 0 #F0DEC6;
+			}
 
-				.wrapper.spotlight.style6:after {
-					box-shadow: inset 0 -1px 0 0 #F0DEC6, 0 1px 0 0 #F0DEC6;
-				}
+			.wrapper.spotlight.style6:after {
+				box-shadow: inset 0 -1px 0 0 #F0DEC6, 0 1px 0 0 #F0DEC6;
+			}
 
-				.wrapper.spotlight.style7 {
-					background-color: #A63352;
-				}
-	
-					.wrapper.spotlight.style7 {
-						background-color: #F0DEC6;
-					}
-	
-					.wrapper.spotlight.style7 p,
-					.wrapper.spotlight.style7 li,
-					.wrapper.spotlight.style7 b {
-						color: #705635;
-					}
-	
-					.wrapper.spotlight.style7 h1,
-					.wrapper.spotlight.style7 h2,
-					.wrapper.spotlight.style7 h3,
-					.wrapper.spotlight.style7 h4,
-					.wrapper.spotlight.style7 h5,
-					.wrapper.spotlight.style7 a,
-					.wrapper.spotlight.style7 hr{
-						color: #AD3451;
-					}
-	
-					.wrapper.spotlight.style7 a.special:not(.button):before {
-						border: solid 2px rgba(173, 52, 81, 0.125);
-					}
-	
-	
-					.wrapper.spotlight.style7 h2.major {
-						border-bottom: solid 2px rgba(173, 52, 81, 0.125);
-					}
-	
-					.wrapper.spotlight.style7:before, .wrapper.spotlight.style7:after {
-						background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23F0DEC6%3B' /%3E%3C/svg%3E");
-					}
-	
-					.wrapper.spotlight.style7:before {
-						box-shadow: inset 0 -1px 0 0 #F0DEC6, 0 1px 0 0 #F0DEC6;
-					}
-	
-					.wrapper.spotlight.style7:after {
-						box-shadow: inset 0 -1px 0 0 #F0DEC6, 0 1px 0 0 #F0DEC6;
-					}
+			/* BALRÓL JOBBRA BÉZS */
+
+			.wrapper.spotlight.style7 {
+				background-color: #F0DEC6;
+			}
+
+			.wrapper.spotlight.style7 p,
+			.wrapper.spotlight.style7 li,
+			.wrapper.spotlight.style7 b {
+				color: #574329;
+			}
+
+			.wrapper.spotlight.style7 h1,
+			.wrapper.spotlight.style7 h2,
+			.wrapper.spotlight.style7 h3,
+			.wrapper.spotlight.style7 h4,
+			.wrapper.spotlight.style7 h5,
+			.wrapper.spotlight.style7 a,
+			.wrapper.spotlight.style7 hr{
+				color: #AD3451;
+			}
+
+			.wrapper.spotlight.style7 a.special:not(.button):before {
+				border: solid 2px rgba(173, 52, 81, 0.125);
+			}
+
+
+			.wrapper.spotlight.style7 h2.major {
+				border-bottom: solid 2px rgba(173, 52, 81, 0.125);
+			}
+
+			.wrapper.spotlight.style7:before, .wrapper.spotlight.style7:after {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23F0DEC6%3B' /%3E%3C/svg%3E");
+			}
+
+			.wrapper.spotlight.style7:before {
+				box-shadow: inset 0 -1px 0 0 #F0DEC6, 0 1px 0 0 #F0DEC6;
+			}
+
+			.wrapper.spotlight.style7:after {
+				box-shadow: inset 0 -1px 0 0 #F0DEC6, 0 1px 0 0 #F0DEC6;
+			}
+
+			/* JOBBRÓL BALRA BORDÓ 3 */
+
+			.wrapper.spotlight.style8 {
+				background-color: #8C3A58;
+			}
+
+			.wrapper.spotlight.style8:before, .wrapper.spotlight.style8:after {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%238C3A58%3B' /%3E%3C/svg%3E");
+			}
+
+			.wrapper.spotlight.style8:before {
+				box-shadow: inset 0 -1px 0 0 #8C3A58, 0 1px 0 0 #8C3A58;
+			}
+
+			.wrapper.spotlight.style8:after {
+				box-shadow: inset 0 -1px 0 0 #8C3A58, 0 1px 0 0 #8C3A58;
+			}
 
 		@media screen and (max-width: 980px) {
 
