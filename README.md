@@ -1,2 +1,5 @@
-# intimtrener
-the website for intimtrener.hu
+# DTKH Kalendárium
+
+## Jelenleg támogatott városok
+
+* Maglód

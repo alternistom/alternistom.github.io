@@ -1,247 +1,88 @@
-<!DOCTYPE HTML>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Intim tréner - Patai Szilvia | Intim Tréning</title>
-		<link rel="icon" type="image/x-icon" href="/images/favicon.png">
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DTKH Hulladéknaptár 2025</title>
 
-		<!-- SEO -->
-    	<meta name="description" content="Patai Szilvia női intim torna tréner bemutatkozó oldala, ahol megismerheted a tréningek előnyeit és jelentkezhetsz a tanfolyamokra.">
-		<meta name="keywords" content="intim tréner, Patai Szilvia, intim torna, női egészség, gátizomtorna, medencefenék erősítés, orgazmus, szexuális élet">
-		<meta name="robots" content="index, follow">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-		<meta property="og:title" content="Intim tréner - Patai Szilvia | Főoldal">
-		<meta property="og:description" content="Patai Szilvia női intim torna tréner bemutatkozó oldala, ahol megismerheted a tréningek előnyeit és jelentkezhetsz a tanfolyamokra.">
-		<meta property="og:image" content="https://www.intimtrener.hu/images/PataiSzilvia_logo_bézs.png">
-		<meta property="og:url" content="https://www.intimtrener.hu/">
-		<meta property="og:type" content="website">
-    	<meta property="og:site_name" content="Intim torna tréner">
+  <style>
+    body { padding: 20px; scroll-behavior: smooth; }
+    .table-container { margin-bottom: 50px; }
+    .nav-links a {
+      margin-right: 10px;
+      display: inline-block;
+    }
+    @media (max-width: 600px) {
+      table { font-size: 14px; }
+      .nav-links { display: flex; flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
 
-		<link rel="canonical" href="https://www.intimtrener.hu/">
-		
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link id="theme-stylesheet" rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-		<script type="text/javascript">
-			(function() {
-				// https://dashboard.emailjs.com/admin/account
-				emailjs.init({
-				publicKey: "lhIvw7fpaB-FR-1Qm",
-				});
-			})();
-		</script>
-		<script type="text/javascript">
-			window.onload = function() {
-				document.getElementById('contact-form').addEventListener('submit', function(event) {
-					event.preventDefault();
-					// these IDs from the previous steps
-					emailjs.sendForm('intimtrener', "intim_template", this)
-						.then(() => {
-							console.log('SUCCESS!');
-						}, (error) => {
-							console.log('FAILED...', error);
-						});
-				});
-			}
-		</script>
-	</head>
-	<body class="is-preload">
+  <div class="container">
+    <h4 class="center-align">DTKH Hulladéknaptár 2025</h4>
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+    <!-- Navigation links -->
+    <div class="nav-links" id="nav-links" style="margin-bottom: 30px;"></div>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">INTIM TRÉNER</a></h1>
-						<nav>
-							<a href="#menu">Menü</a>
-						</nav>
-					</header>
+    <!-- Tables will be generated here -->
+    <div id="tables-container"></div>
+  </div>
 
-				<!-- Menu -->
-                    <nav id="menu">
-                        <div class="inner">
-							<h2>Menü</h2>
-							<ul class="links">
-								<li><a href="/index.html">főoldal</a></li>
-								<li><a href="/intimtorna.html">intim torna</a></li>
-								<li><a href="/bemutatkozas.html">bemutatkozás</a></li>
-								<li><a href="/index.html#footer">elérhetőségek</a></li>
-								<li><a href="/arak.html">árak</a></li>
-							</ul>
-							<a href="#" class="close">Close</a>
-						</div>
-                    </nav>
+  <script>
+    fetch("data.json")
+      .then(response => response.json())
+      .then(jsonData => {
+        const navLinks = document.getElementById("nav-links");
+        const tablesContainer = document.getElementById("tables-container");
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<div class="logo">
-								<img class="imglogo" src="images/PataiSzilvia_logo_bézs.png" alt="Patai Szilvia intim tréner logója">
-							</div>
-							<h2>Intim torna nőknek</h2>
-							<p>Patai Szilvia vagyok, női intim torna tréner. Tarts velem egyéni vagy kiscsoportos óráimon, ahol elsajátíthatod a gátizomtornát!</p>
-						</div>
-					</section>
+        // Go through each city in the JSON
+        Object.keys(jsonData).forEach(cityName => {
+          // Create a hotlink (button)
+          const link = document.createElement("a");
+          link.href = `#${cityName}`;
+          link.classList.add("btn", "blue", "lighten-2", "waves-effect");
+          link.textContent = cityName;
+          navLinks.appendChild(link);
 
-				<!-- Wrapper -->
-					<section id="wrapper">
+          // Create a table container
+          const cityDiv = document.createElement("div");
+          cityDiv.classList.add("table-container");
+          cityDiv.id = cityName; // Used for anchor target
 
-						<!-- One -->
-							<section id="one" class="wrapper spotlight style7">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/circ_1_inv.png" alt="" /></a>
-									<div class="content">
-										<h2 class="major">TERMÉKENYSÉG</h2>
-										<p>
-											<ul>
-												<li>Csökkenti a menstruációs diszkomfortot</li>
-												<li>Csökkenti a meddőség kockázatát</li>
-												<li>Segít a könnyebb szülésben és a szülés utánni regenereálásban</li>
-												<li>Megszűnik a gyulladásos hajlam és a felfázások</li>
-											</ul>
-										</p>
-										<a href="/intimtorna.html" class="special">Tudj meg többet</a>
-									</div>
-								</div>
-							</section>
+          cityDiv.innerHTML = `
+            <h5>${cityName}</h5>
+            <table class="highlight responsive-table striped centered">
+              <thead>
+                <tr>
+                  <th>Típus</th>
+                  <th>JAN</th><th>FEB</th><th>MAR</th><th>APR</th>
+                  <th>MAY</th><th>JUN</th><th>JUL</th><th>AUG</th>
+                  <th>SEP</th><th>OCT</th><th>NOV</th><th>DEC</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          `;
 
-						<!-- Two -->
-						<section id="two" class="wrapper alt spotlight style5">
-							<div class="inner">
-								<a href="#" class="image"><img src="images/circ_2.png" alt="" /></a>
-								<div class="content">
-									<h2 class="major">REGENERÁCIÓ</h2>
-									<p>
-										<ul>
-											<li>Megelőzheted az akaratlan vizeletvesztést, szél vagy széklettartási nehézséget</li>
-											<li>Megelőzheti és helyreállíthatja a kismedencei szervek süllyedését (rectocele, cystocele, enterocele)</li>
-											<li>Mióma, ciszták, endometriozis gyógyulását elősegíti</li>
-											<li>Az aranyeres panaszok megszűnnek</li>
-										</ul>
-									</p>
-									<a href="/intimtorna.html" class="special">Tudj meg többet</a>
-								</div>
-							</div>
-						</section>
+          tablesContainer.appendChild(cityDiv);
 
-						<!-- One -->
-						<section id="one" class="wrapper spotlight style7">
-							<div class="inner">
-								<a href="#" class="image"><img src="images/circ_3_inv.png" alt="" /></a>
-								<div class="content">
-									<h2 class="major">FITTSÉG</h2>
-									<p>
-										<ul>
-											<li>Feszes, izmos és rugalmas lesz a hüvelyed</li>
-											<li>Jelentős vitalitást fokozó és energetikai hatása van</li>
-											<li>Jótékony hatása van a méhre, húgyhólyagra, petefészkekre, belekre</li>
-										</ul>
-									</p>
-									<a href="/intimtorna.html" class="special">Tudj meg többet</a>
-								</div>
-							</div>
-						</section>
+          // Fill the table rows
+          const tbody = cityDiv.querySelector("tbody");
+          jsonData[cityName].forEach(row => {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `<td><b>${row.type}</b></td>` +
+              row.months.map(m => `<td>${m}</td>`).join("");
+            tbody.appendChild(tr);
+          });
+        });
+      })
+      .catch(err => console.error("❌ Error loading JSON:", err));
+  </script>
 
-						<!-- Two -->
-							<section id="two" class="wrapper alt spotlight style5">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/happy.png" alt="" /></a>
-									<div class="content">
-										<h2 class="major">A képzés során elsajátítható technikák:</h2>
-										<p><b>Intim Medical Akadémia</b> által kifejlesztett engedélyezett tornagyakorlatok
-											<br><br><b>Légzéstechnika:</b> Mélylégzés és relaxáció a stressz csökkentésére és az izomműködés javítása érdekében
-											<br><br><b>Testtudat fejlesztése:</b> A test jelzéseinek felismerése és tudatosítása a mindennapokban
-											<br><br><b>Mobilizációs és elongációs gyakorlatok</b> a test és lélek harmóniájának elérése érdekében</p>
-										<a href="/intimtorna.html" class="special">Tudj meg többet</a>
-									</div>
-								</div>
-							</section>
-
-						<!-- Three -->
-							<section id="three" class="wrapper spotlight style7">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/szilvia.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Engem keresel ha...</h2>
-										<p><b>Intim Medical tréningre van szükséged:</b> Biztonságos öngondoskodási módszereket tanítok, melyek hosszú távon megőrzik a női egészséget.
-											<br><br><b>Széleskörű szakmai tapasztalatot keresel:</b> Több mint egy évtizedes tapasztalattal rendelkezem az alternatív gyógyászat különböző területein, mint pl gyógymasszázs, természetgyógyászat, reflexológia, craniosacralis biodinamika, metamorf masszázs, gerinctorna.
-											<br><br><b>Holisztikus megközelítést szeretnél:</b> Az alternatív gyógyászatban töltött sok éves tanulmányaim nyomán úgy gondolom, hogy minden mindennel összefüggésben áll és az egyensúly teremtése a megoldás a minden problémára! Ezért komplex terápiát állítok össze, amely figyelemmel van az egyén táplálkozására, mozgására, életmódbeli szokásaira egyaránt.
-											<br><br><b>Fontos számodra a prevenció és támogatás:</b> Elkötelezett vagyok a problémák megelőzése és az egészséges életmód támogatása mellett.
-											<br><br><b>Folyamatosan fejlődő szakembert keresel:</b> Rendszeresen képzem magam, hogy a legújabb szakmai irányelveknek megfelelően tudjak segíteni.</p>
-										<a href="/bemutatkozas.html" class="special">Tudj meg többet rólam</a>
-									</div>
-								</div>
-							</section>
-					</section>
-
-				<!-- Footer -->
-					<section id="footer">
-						<div class="inner">
-							<h2 class="major">ELÉRHETŐSÉGEK</h2>
-							<p>
-								Egyéni és kiscsoportos intimtorna tanfolyamokat tartok Cegléden, ahol barátságos közegben minden résztvevő személyreszabott figyelmet kap.
-								<br><br>
-								Ha további kérdésed van a tanfolyammal kapcsolatban írj emailt, vagy hívj az alábbi telefonszámon.
-								<br><br>
-								<b>Időpontok:</b> Jelentkezések alapján. Hétköznapi és hétvégi időpontok egyaránt elérhetőek.
-								<br><br>
-								Várlak szeretettel!
-								<br><br>
-								Itt közvetlen is írhatsz nekem:
-
-
-							</p>
-							<form method="post" id="contact-form">
-								<div class="fields">
-									<input type="hidden" name="contact_number" value="697483">
-									<div class="field">
-										<label>Név</label>
-										<input type="text" name="user_name">
-									</div>
-									<div class="field">
-										<label>Email</label>
-										<input type="email" name="user_email">
-									</div>
-									<div class="field">
-										<label>Üzeneted számomra:</label>
-										<textarea name="message"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Üzenet küldése"></li>
-								</ul>
-							</form>
-							<ul class="contact">
-								<li class="icon solid fa-home">
-									Harmónia Egészségcentrum<br />
-									Cegléd, Árpád utca 14.
-								</li>
-								<li class="icon solid fa-phone">+36 70 268 10 30</li>
-								<li class="icon solid fa-envelope"><a href="mailto:info@intimtrener.hu">info@intimtrener.hu</a></li>
-								<li class="icon brands fa-facebook-f"><a href="https://www.facebook.com/harmoniamasszazscegled">@harmoniamasszazscegled</a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Intim Tréner. Minden jog fenntartva.</li>
-							</ul>
-						</div>
-					</section>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
