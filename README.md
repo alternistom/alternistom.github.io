@@ -1,4 +1,4 @@
-# DTKH Kalendárium
+# DTKH Hulladéknaptár 2025
 
 ## Jelenleg támogatott városok
 
