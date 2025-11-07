@@ -9,25 +9,145 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
   <style>
-    body { padding: 20px; scroll-behavior: smooth; }
-    .table-container { margin-bottom: 50px; }
+    :root {
+      --dorfic-orange: #ff7a00;
+      --dorfic-orange-dark: #e86400;
+      --dorfic-red: #d62828;
+      --dorfic-bg: #f6f3f0;
+    }
+
+    body {
+      padding: 0;
+      background: var(--dorfic-bg);
+      font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* top bar */
+    .topbar {
+      background: linear-gradient(to right, #ff7a00 0%, #e86400 50%, #ffb347 100%);
+      padding: 14px 0 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+      margin-bottom: 20px;
+    }
+    .topbar h4 {
+      margin: 0;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    .subline {
+      text-align: center;
+      color: rgba(255,255,255,0.8);
+      font-size: 0.8rem;
+      margin-top: 3px;
+      letter-spacing: .12em;
+    }
+
+    .container {
+      margin-top: 0;
+      padding-top: 10px;
+    }
+
+    /* nav links */
+    .nav-links {
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
     .nav-links a {
-      margin-right: 10px;
+      background: linear-gradient(to bottom, #ff7a00 0%, #e86400 100%);
+      border: 1px solid rgba(230, 100, 0, 0.5);
+      box-shadow: 0 2px 0 rgba(0,0,0,0.08);
+      text-transform: none;
+      font-weight: 500;
+    }
+    .nav-links a:hover {
+      background: linear-gradient(to bottom, #ff8b1f 0%, #ff6a00 100%);
+    }
+
+    /* table container */
+    .table-container {
+      margin-bottom: 36px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px 16px 6px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+      border: 1px solid rgba(255,122,0,0.12);
+    }
+    .table-container h5 {
+      color: #e86400;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      font-size: 1.1rem;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .table-container h5::before {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: radial-gradient(circle, #fff 0%, #ff7a00 80%);
+      border-radius: 50%;
+      border: 1px solid rgba(255,122,0,0.4);
       display: inline-block;
     }
+
+    table.highlight thead tr {
+      background: linear-gradient(to bottom, #ffe4cc 0%, #ffd2aa 100%);
+    }
+    table.highlight thead th {
+      color: #b53c00;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+    }
+    table.striped > tbody > tr:nth-child(odd) {
+      background-color: rgba(255, 122, 0, 0.03);
+    }
+    table.centered td {
+      vertical-align: middle;
+    }
+    tbody td:first-child b {
+      color: #d62828;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: .75rem;
+    }
+
+    /* make it breathe on mobile */
     @media (max-width: 600px) {
-      table { font-size: 14px; }
-      .nav-links { display: flex; flex-wrap: wrap; }
+      .nav-links {
+        flex-direction: row;
+      }
+      table {
+        font-size: 13px;
+      }
+      .table-container {
+        padding: 12px 8px;
+      }
+      .topbar h4 {
+        font-size: 1.25rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <h4 class="center-align">DTKH Hulladéknaptár 2025</h4>
+  <div class="topbar">
+    <div class="container">
+      <h4>DTKH Hulladéknaptár 2025 - Maglód</h4>
+    </div>
+  </div>
 
+  <div class="container">
     <!-- Navigation links -->
-    <div class="nav-links" id="nav-links" style="margin-bottom: 30px;"></div>
+    <div class="nav-links" id="nav-links"></div>
 
     <!-- Tables will be generated here -->
     <div id="tables-container"></div>
@@ -40,19 +160,18 @@
         const navLinks = document.getElementById("nav-links");
         const tablesContainer = document.getElementById("tables-container");
 
-        // Go through each city in the JSON
         Object.keys(jsonData).forEach(cityName => {
           // Create a hotlink (button)
           const link = document.createElement("a");
           link.href = `#${cityName}`;
-          link.classList.add("btn", "blue", "lighten-2", "waves-effect");
+          link.classList.add("btn", "waves-effect");
           link.textContent = cityName;
           navLinks.appendChild(link);
 
           // Create a table container
           const cityDiv = document.createElement("div");
           cityDiv.classList.add("table-container");
-          cityDiv.id = cityName; // Used for anchor target
+          cityDiv.id = cityName;
 
           cityDiv.innerHTML = `
             <h5>${cityName}</h5>
